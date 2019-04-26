@@ -12,6 +12,7 @@
 		app.controller("AppCAPCtrl", ['$scope', function ($scope) {
 			$scope.appname = "Contas A Pagar";
 			$scope.company = "Contas A Receber";
+
 			
 			$scope.despesas = [
 				{emissao: new Date('2017-12-03'), descricao: 'Energia Elétrica', valor: 200, vencimento: new Date('2018-01-03'), status_cor:'#90EE90'},
@@ -28,9 +29,11 @@
 				{nome:'Despesas Pessoais',codigo:4,grupo: 'Despesas'},
 			];
 
+
 			$scope.adicionarDespesa = function(despesa) {
 				$scope.despesas.push(angular.copy(despesa));
 			}
+
 			
 			$scope.temMarcada = function (despesas) {
 				return despesas.some(function(despesa) {
@@ -159,3 +162,4 @@
 	</footer>
 </body>
 </html>
+
